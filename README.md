@@ -22,3 +22,12 @@ Producer uses String key and Double value Serializers to log to the topic.
 ###### Consumer:
 Consumer uses String key and Double value Deserializer. It runs indefinitely and polls to consume from
 topic 'celcius-readings'
+
+###### Building code
+Git clone the respository, then in the root directory
+```
+mvn clean install
+make image
+docker-compose up -d
+```
+

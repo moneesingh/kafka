@@ -41,7 +41,6 @@
     <modules>
         <module>kconsumer</module>
         <module>kproducer</module>
-        <module>kdocker</module>
     </modules>
 
     <dependencies>
