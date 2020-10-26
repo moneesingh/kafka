@@ -20,4 +20,5 @@ and uses a callback to log error if send fails. Main program exits in 4 sec.
 Producer uses String key and Double value Serializers to log to the topic.
 
 ###### Consumer:
-Consumer used String key and Double value Deserializer.
+Consumer uses String key and Double value Deserializer. It runs indefinitely and polls to consume from
+topic 'celcius-readings'

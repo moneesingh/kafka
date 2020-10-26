@@ -22,22 +22,22 @@ services:
       - app-network
     depends_on:
       - zookeeper
-  webapp1:
-    image: 'app1:latest'
-    ports:
-      - '8085:8085'
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
-    networks:
-      - app-network
-  webapp2:
-    image: 'app2:latest'
-    ports:
-      - '8086:8086'
-    environment:
-      - ALLOW_ANONYMOUS_LOGIN=yes
-    networks:
-      - app-network
+#  webapp1:
+#    image: 'app1:latest'
+#    ports:
+#      - '8085:8085'
+#    environment:
+#      - ALLOW_ANONYMOUS_LOGIN=yes
+#    networks:
+#      - app-network
+#  webapp2:
+#    image: 'app2:latest'
+#    ports:
+#      - '8086:8086'
+#    environment:
+#      - ALLOW_ANONYMOUS_LOGIN=yes
+#    networks:
+#      - app-network
 networks:
   app-network:
     driver: bridge
