@@ -13,7 +13,7 @@ There are no other applications already running on port 9092
 
 #### Behavior
 
-####### Producer:
+######Producer:
 Producer create a topic, 'celcius-readings' and configures the topic to log producer timestamp.
 Producer schedules a task to send a Double type random celcius reading to the topic every 1 sec asynchronously
 and uses a callback to log error if send fails. Main program exits in 4 sec.
