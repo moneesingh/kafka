@@ -47,7 +47,8 @@ public class ProducerApp {
         SenderTask t = new SenderTask();
         timer.schedule(t, 0, 1000);
 
-        for (int i=0; i<2; i++) {
+
+        for (int i=0; i<100; i++) {
             logger.debug("In Producer main");
             try {
                 Thread.sleep(2000);
@@ -64,7 +65,7 @@ public class ProducerApp {
         adminProps.put("bootstrap.servers", BOOTSTRAP_SERVERS);
         AdminClient adminClient = AdminClient.create(adminProps);
 
-        //ToDo: Check error - if topic already exists or could not be created.
+        //ToDo: Check error - if topic already exists or could not be created
         return adminClient.createTopics(topics);
     }
 
