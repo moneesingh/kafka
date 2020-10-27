@@ -25,10 +25,18 @@ Consumer application log into /opt/kconsumer/log/consumerApp.log
 
 #### Code build Requirements:
 You will need git, Java8, Maven3, Docker 18.09 or up, Compose 1.23.2 or up
-Git clone the respository, then use below commands in the root directory
+Git clone the respository, then use below commands in the root project directory as root user, or sudo if needed.
 ```
-make image
-docker-compose up -d
+sudo make image
+sudo docker-compose up -d
+
+#To look at consumer log and output
+sudo docker exec -it <consumer_container> sh
+SHELL>tail -f log/consumerApp.log
+
+#To stop clean up
+sudo docker-compose down
+make clean 
 ```
 
 ###### ToDo:

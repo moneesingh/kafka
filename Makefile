@@ -1,4 +1,4 @@
-CWD := $(PWD)
+CWD := $(shell pwd)
 ROOTDIR := $(CWD)
 VERSION := latest
 
