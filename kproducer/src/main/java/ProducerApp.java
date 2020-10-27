@@ -20,13 +20,6 @@ public class ProducerApp {
     private static String topicName = "celcius-readings";
 
     public static void main(String []args) {
-        ClassLoader cl = ClassLoader.getSystemClassLoader();
-
-        URL[] urls = ((URLClassLoader)cl).getURLs();
-
-        for(URL url: urls){
-            System.out.println(url.getFile());
-        }
 
         NewTopic topic = new NewTopic(topicName, 1, (short) 1);
         Map<String, String> m = new HashMap<>();
@@ -46,7 +39,6 @@ public class ProducerApp {
         Timer timer = new Timer();
         SenderTask t = new SenderTask();
         timer.schedule(t, 0, 1000);
-
 
         for (int i=0; i<100; i++) {
             logger.debug("In Producer main");
