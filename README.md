@@ -16,7 +16,8 @@ There are no other applications already running on port 9092
 ###### Producer:
 Producer creates a topic, 'celcius-readings' and configures the topic to log producer timestamp.
 Producer schedules a task to send a Double type random celcius reading to the topic every 1 sec asynchronously
-and uses a callback to log error if send fails. Main program exits in 4 sec.
+and uses a callback to log error if send fails.
+Application exits in 200 sec. This can be increased or it can be run infinitely by changing the for loop in main method.
 Producer uses String key and Double value Serializers to log to the topic.
 Applications log in /opt/kproducer/log/producerApp.log
 
