@@ -1,15 +1,12 @@
 This is a kafka application
 ---------------------------
 It builds and runs 3 containers.
-1. Kafka Server (bitnami/kafka:latest)
+1. Kafka Server and zookeeper (uses bitnami images https://github.com/bitnami/bitnami-docker-kafka)
 2. Kafka Producer
 3. kafka Consumer
 
-#### Requirements:
-git, Java8, Maven3, Docker 18.09 or up, Compose 1.23.2
-
 #### Assumptions:
-There are no other applications already running on port 9092
+There are no other applications already running on ports 9092 and 2181
 
 #### Behavior
 
@@ -26,15 +23,15 @@ Consumer uses String key and Double value Deserializer. It runs indefinitely and
 topic 'celcius-readings'. It outputs producer created timestamp and celcius reading on console and also logs to a logfile.
 Consumer application log into /opt/kconsumer/log/consumerApp.log
 
-###### Building code
-Git clone the respository, then in the root directory
+#### Code build Requirements:
+You will need git, Java8, Maven3, Docker 18.09 or up, Compose 1.23.2 or up
+Git clone the respository, then use below commands in the root directory
 ```
 make image
 docker-compose up -d
 ```
 
 ###### ToDo:
-Add testcases.
-
+Add testcases
 
 
