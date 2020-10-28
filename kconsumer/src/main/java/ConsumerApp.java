@@ -34,11 +34,11 @@ public class ConsumerApp {
                 logger.info("timestamp " + record.timestamp() + " Record " + record.value());
                 System.out.println("timestamp " + record.timestamp() + " Record " + record.value());
             }
-            /*try {
+            try {
                 consumer.commitAsync();
             } catch (CommitFailedException e) {
                 logger.error("commit failed", e);
-            } */
+            }
         }
     }
 }

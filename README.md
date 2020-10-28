@@ -5,11 +5,6 @@ It builds and runs 3 containers.
 2. Kafka Producer
 3. kafka Consumer
 
-#### Assumptions:
-There are no other applications already running on ports 9092 and 2181
-
-#### Behavior
-
 ###### Producer:
 Producer creates a topic, 'celcius-readings' and configures the topic to log producer timestamp.
 Producer schedules a task to send a Double type random celcius reading to the topic every 1 sec asynchronously
