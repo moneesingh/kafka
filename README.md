@@ -1,11 +1,10 @@
 This is a kafka application
 ---------------------------
-It builds and runs these containers.
+It builds and runs these containers. It uses bitnami images for kafka and zookeeper (https://github.com/bitnami/bitnami-docker-kafka)
 1. Kafka Server
 2. zookeeper
 3. Kafka Producer
 4. kafka Consumer
-(uses bitnami images for kafka and zookeeper https://github.com/bitnami/bitnami-docker-kafka)
 
 ###### Producer:
 Producer creates a topic, 'celcius-readings' and configures the topic to log producer timestamp.
